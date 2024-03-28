@@ -1,0 +1,542 @@
+body {
+    background-color: #14131a;
+  
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  #green-dots {
+    display: flex;
+    flex-direction: column; /* Change to column */
+  
+   
+  }
+  
+  .green-dot1 {
+    position: fixed;
+    background-color: rgb(6, 190, 6);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top:-30px;
+  }
+  
+  .green-dot2 {
+    position: fixed;
+    background-color: rgb(6, 190, 6);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 39px;
+    margin-top: -30px;
+  }
+  
+  
+  #sidebar {
+    position: fixed;
+    left: 15px;
+    width: 18%;
+    height: 80%;
+  margin-top: 0;
+  
+  border-radius: 5px;
+  height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: #1c1b23;
+  }
+  
+  .navbar {
+    height: 80px;
+    float: right;
+    padding: 25px 0;
+    background-color: #14131a;
+    width: 80%;
+    margin-left: 20%;
+    position: fixed; /* Add this line to make the navbar fixed at the top */
+    top: 0; /* Add this line to position the navbar at the top of the viewport */
+    z-index: 1; /* Add this line to ensure the navbar appears above other elements */
+  }
+  
+  
+  
+  .clear {
+    clear: both;
+  }
+  
+  
+  .social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    
+  
+  }
+  
+  .social-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 25px 20px 0 rgba(63, 62, 62, 0.1), 0 8px 20px 0 rgba(55, 55, 55, 0.5);
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .social-icon {
+    font-weight: bold;
+    margin-top: 5px;
+    color: aliceblue;
+    cursor: pointer;
+  }
+  
+  .social-icon::before {
+    content: '';
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: -35px;
+  }
+  
+  @media (max-width: 768px) {
+    #sidebar {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+      cursor: pointer;
+    }
+  }
+  
+  /* New section for the horizontal box */
+  #horizontal-box {
+    margin-left: 20%;
+  
+    margin-top: 41px;
+  float: right;
+    width: 80%;
+    height: 20%;
+  background-image: url(nenad-novakovic-L2QB-rG5NM0-unsplash.jpg);  
+  background-size: cover; /* Adjust the background size property */
+    background-position: center; /* Adjust the background position property */
+    background-repeat: no-repeat;
+  
+  
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+  padding: 15px;
+  border-style:outset;
+  border-radius: 5px;
+  
+  }
+  
+  
+  
+  #profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-right: 10px;
+    box-shadow: 0 25px 20px 0 rgba(0, 0, 0, 0.10), 0 8px 20px 0 rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  #user-name {
+    color: snow;
+    font-size: 28px;
+    
+    /* Adjust the font size as needed */
+    font-weight: 700;
+    /* Adjust the font weight as needed */
+    margin-bottom: 2px;
+    text-shadow: 2px 2px 8px #333;
+      margin-left: 8px;
+  }
+  
+  #user-role {
+    margin-left: 8px;
+    display: flex;
+    color: snow;
+    font-size: 18px;
+    text-shadow: 2px 2px 8px #333;
+    /* Adjust the font size as needed */
+  }
+  
+  #horizontal-box button {
+    text-shadow: 2px 2px 8px #333;
+    top: 19%;
+    right: 20px;
+  border-radius: 5px;
+    background-color: #facc6b;
+    background-image: linear-gradient(315deg, #facc6b 0%, #edac28 74%);
+    color:aliceblue;
+    float: right;
+    margin-left: 767px;
+    border: 0;
+    padding: 10px;
+    position: absolute;
+    box-shadow: 0 25px 20px 0 rgba(0, 0, 0, 0.10), 0 8px 20px 0 rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .contactbutton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+  }
+  
+  .contactbutton button {
+    text-shadow: 2px 2px 8px #333;
+    border: 0;
+    border-radius: 5px;
+    color: antiquewhite;
+    padding: 8px;
+    background-color: #1b8b00;
+    background-image: linear-gradient(314deg, #1b8b00 0%, #a2d240 74%);
+  }
+  
+  #card-container {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  .card {
+    width: 18%;
+  padding: 2px;
+  transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 268px;
+    height: 190px;
+    
+  }
+  
+  .card h5 {
+    margin-top: 15px;
+    color: #14131a;
+    margin-left: 7px;
+  }
+  
+  .card p {
+    color: grey;
+    margin-left: 7px;
+    font-size: small;
+  }
+  
+  #title2 {
+    color: aliceblue;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-left: 327px;
+    font-size: larger;
+  }
+  
+  #title1 {
+    color: aliceblue;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-left: 327px;
+    font-size: larger;
+  }
+  
+  #about-container {
+    background-color: #1c1b23;
+    padding: 10px;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    margin-left: 327px;
+  }
+  
+  #about-container p {
+    color: aliceblue;
+    color: #a6a6a6;
+    line-height: 1.5;
+  }
+  
+  #title3 {
+    color: aliceblue;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-left: 365px;
+    font-size: larger;
+  }
+  
+  #skills-container {
+    display: flex;
+  
+    margin-bottom: 20px;
+  }
+  
+  .skill-card {
+    margin-left: 20px;
+    width: 200px; /* Adjust the width as needed */
+  
+    border-radius: 5px;
+    background-color: #1c1b23;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .skill-card h6 {
+    color: #a6a6a6;
+  }
+  
+  .skill-card ul {
+    list-style: none;
+    padding: 0;
+    
+  }
+  
+  .skill-card li {
+    color: #7a7a7a;
+    background-color: #14131a;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: smaller;
+  }
+  .skill-card1 {
+    margin-left: 368px;
+    width: 200px; /* Adjust the width as needed */
+  
+    border-radius: 5px;
+    background-color: #1c1b23;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .skill-card1 h6 {
+    color: #a6a6a6;
+  }
+  
+  .skill-card1 ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skill-card1 li {
+    color: #7a7a7a;
+    background-color: #14131a;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: smaller;
+  }
+  
+  .skill-card3 {
+    margin-left:20px;
+    width: 200px; /* Adjust the width as needed */
+    border-radius: 5px;
+    background-color: #1c1b23;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .skill-card3 h6 {
+   font-size: larger;
+  }
+  
+  .skill-card3 ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skill-card3 li {
+    color: #7a7a7a;
+    
+    margin: 5px 0;
+    padding: 5px;
+    font-size: smaller;
+  }
+  
+      .container {
+        max-width: 600px;
+       
+        margin-left: 570px;
+        background-color: #1c1b23;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: whitesmoke;
+        font-size: larger;
+      }
+  
+      .contact-item {
+        display: flex;
+        align-items: center;
+        color: #a49f9f;
+      }
+      .contact-item i {
+        margin-right: 10px;
+        
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 8px;
+      }
+    
+  
+      /*Scrool bar css */
+      /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;.switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      
+    }
+    
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      box-shadow: 0 0 18px whitesmoke;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: rgb(36, 35, 35);
+      -webkit-transition: .4s;
+      transition: .4s;
+      
+    }
+    
+    input:checked + .slider {
+      background-color: white;
+    }
+    
+    input:focus + .slider {
+      box-shadow: 0 0 18px whitesmoke;
+    }
+    
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a; 
+  }
